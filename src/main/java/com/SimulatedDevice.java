@@ -172,7 +172,6 @@ public class SimulatedDevice {
 			System.out.println("Received message from cloud: " + msgString);
 		//Invoking the .sh script to open port.
 			CloudCommand cmd = gsonTool.fromJson(msgString, CloudCommand.class);
-//			System.out.println("gg"+ cmd);
 			if (consolCommands.containsKey(cmd.Command)) {
 				System.out.println("executing commands" + cmd.Command);
 				String threadName = Thread.currentThread().getName();
